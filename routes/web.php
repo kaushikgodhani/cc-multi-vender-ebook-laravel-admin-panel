@@ -18,6 +18,8 @@
 |
 */
 
+
+
 Route::get('login/{service}', 'Auth\LoginController@redirectToProvider');
 Route::get('login/{service}/callback', 'Auth\LoginController@handleProviderCallback');
 Auth::routes();
@@ -79,6 +81,7 @@ Route::middleware('auth')->group(function () {
             Route::get('clear-cache', 'AppSettingController@clearCache');
             Route::get('check-update', 'AppSettingController@checkForUpdates');
             // disable special character and number in route params
+            
             Route::get('/{type?}/{tab?}', 'AppSettingController@index')
                 ->where('type', '[A-Za-z]*')->where('tab', '[A-Za-z]*')->name('app-settings');
         });
