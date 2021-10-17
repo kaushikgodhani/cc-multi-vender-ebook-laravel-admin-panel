@@ -53,7 +53,7 @@ Route::resource('products', 'API\ProductAPIController');
 Route::resource('galleries', 'API\GalleryAPIController');
 Route::resource('product_reviews', 'API\ProductReviewAPIController');
 
-Route::resource('order', 'API\OrderAPIController'); //OrderAPI GetBy Via ID
+Route::resource('order', 'API\OrderAPIController');
 
 
 Route::resource('faqs', 'API\FaqAPIController');
