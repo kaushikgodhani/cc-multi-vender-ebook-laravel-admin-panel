@@ -17,6 +17,11 @@
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::get('order','API\OrderAPIController');
+
+
+
 Route::prefix('driver')->group(function () {
     Route::post('login', 'API\Driver\UserAPIController@login');
     Route::post('register', 'API\Driver\UserAPIController@register');
@@ -55,7 +60,7 @@ Route::resource('product_reviews', 'API\ProductReviewAPIController');
 
 Route::resource('order', 'API\OrderAPIController');
 
-Route::get('order','API\OrderAPIController');
+// Route::get('order','API\OrderAPIController');
 
 Route::resource('faqs', 'API\FaqAPIController');
 Route::resource('market_reviews', 'API\MarketReviewAPIController');
