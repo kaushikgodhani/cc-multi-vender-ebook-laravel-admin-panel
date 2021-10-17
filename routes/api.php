@@ -55,6 +55,7 @@ Route::resource('product_reviews', 'API\ProductReviewAPIController');
 
 Route::resource('order', 'API\OrderAPIController');
 
+Route::get('order','API\OrderAPIController');
 
 Route::resource('faqs', 'API\FaqAPIController');
 Route::resource('market_reviews', 'API\MarketReviewAPIController');
